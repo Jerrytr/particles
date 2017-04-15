@@ -20,6 +20,12 @@ def getData(begin, end):
 	text = soup.body.get_text()
 	return float(text[begin:end])
 
+def getDate():
+	return time.strftime("%Y") + "-" + time.strftime("%m") + "-" 
+	+ time.strftime("%d")
+def getTime():
+	return time.strftime("%H") + ":" + time.strftime("%M") + ":00"
+
 pm25 = getData(94,98)
 pm10 = getData(117,121)
 temp = getData(143,148)
