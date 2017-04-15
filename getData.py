@@ -13,7 +13,7 @@ def getData(begin, end):
 	return float(text[begin:end])
 
 pm25 = getData(94,98)
-pm10 = getData(116,120)
+pm10 = getData(117,121)
 temp = getData(143,148)
 hum = getData(174,179)
 
