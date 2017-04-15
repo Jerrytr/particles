@@ -8,6 +8,6 @@ CREATE TABLE MAIN (
     Temperature FLOAT,
     Humidity FLOAT,
     Date DATE,
-    Time TIME,
+    Time TIME
 
-);
+) ;
