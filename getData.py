@@ -1,5 +1,13 @@
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
+import mysql.connector as mysql
+import time
+import getpass
+
+dbuser = input("MySQL username: ")
+dbpass = getpass.getpass("MySQL password: ")
+db = mysql.connect(host = "localhost", user = dbuser, passwd = dbpass, db = 
+"PARTICLES", buffered = True, autocommit = True)
 
 def getData(begin, end):
 	url = "http://192.168.1.11/values"
