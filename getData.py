@@ -31,17 +31,19 @@ def saveToDatabase(pm25, pm10, temp, hum, currentDate, currentTime):
 	pm10 = str(pm10)
 	temp = str(temp)
 	hum = str(hum)
+	print(currentDate)
 	mysql = "INSERT INTO MAIN VALUES('" + pm10 + "','" + pm25 + "','" + temp + "','" + hum + "','" + currentDate + "','" + currentTime + "')"
 	cur.execute(mysql)
 	return
+while True:
+	pm25 = getData(94,98)
+	pm10 = getData(117,121)
+	temp = getData(144,149)
+	hum = getData(175,180)
+	currentDate = getDate()
+	currentTime = getTime()
 
-pm25 = getData(94,98)
-pm10 = getData(117,121)
-temp = getData(144,149)
-hum = getData(175,180)
-currentDate = getDate()
-currentTime = getTime()
-
-saveToDatabase(pm25, pm10, temp, hum, currentDate, currentTime)
-print(pm25)
-time.sleep(1600)
+	saveToDatabase(pm25, pm10, temp, hum, currentDate, currentTime)
+	print(pm25)
+	print(pm10)
+	time.sleep(5*60)
