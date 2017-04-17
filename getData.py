@@ -38,7 +38,7 @@ def saveToDatabase(pm25, pm10, temp, hum, currentDate, currentTime):
 pm25 = getData(94,98)
 pm10 = getData(117,121)
 temp = getData(144,149)
-hum = getData(174,179)
+hum = getData(175,180)
 currentDate = getDate()
 currentTime = getTime()
 
