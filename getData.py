@@ -8,6 +8,7 @@ dbuser = input("MySQL username: ")
 dbpass = getpass.getpass("MySQL password: ")
 db = mysql.connect(host = "localhost", user = dbuser, passwd = dbpass, db = 
 "PARTICLEDATA", buffered = True, autocommit = True)
+cur=db.cursor()
 
 def getData(begin, end):
 	url = "http://192.168.1.11/values"
