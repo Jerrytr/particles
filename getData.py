@@ -32,8 +32,11 @@ def saveToDatabase(pm25, pm10, temp, hum, date, time):
 
 pm25 = getData(94,98)
 pm10 = getData(117,121)
-temp = getData(143,148)
+temp = getData(144,149)
 hum = getData(174,179)
+date = getDate()
+time = getTime()
 
+saveToDatabase(pm25, pm10, temp, hum, date, time)
 print(pm25)
-
+time.sleep(1600)
