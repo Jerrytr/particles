@@ -26,12 +26,12 @@ def getDate():
 	+ time.strftime("%d")
 def getTime():
 	return time.strftime("%H") + ":" + time.strftime("%M") + ":00"
-def saveToDatabase(pm25, pm10, temp, hum, date, time):
+def saveToDatabase(pm25, pm10, temp, hum, currentDate, currentTime):
 	pm25 = str(pm25)
 	pm10 = str(pm10)
 	temp = str(temp)
 	hum = str(hum)
-	mysql = "INSERT INTO MAIN VALUES('" + pm10 + "','" + pm25 + "','" + temp + "','" + hum + "','" + date + "','" + time + "')"
+	mysql = "INSERT INTO MAIN VALUES('" + pm10 + "','" + pm25 + "','" + temp + "','" + hum + "','" + currentDate + "','" + currentTime + "')"
 	cur.execute(mysql)
 	return
 
@@ -39,8 +39,8 @@ pm25 = getData(94,98)
 pm10 = getData(117,121)
 temp = getData(144,149)
 hum = getData(174,179)
-date = getDate()
-time = getTime()
+currentDate = getDate()
+currentTime = getTime()
 
 saveToDatabase(pm25, pm10, temp, hum, date, time)
 print(pm25)
