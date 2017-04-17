@@ -42,6 +42,6 @@ hum = getData(174,179)
 currentDate = getDate()
 currentTime = getTime()
 
-saveToDatabase(pm25, pm10, temp, hum, date, time)
+saveToDatabase(pm25, pm10, temp, hum, currentDate, currentTime)
 print(pm25)
 time.sleep(1600)
