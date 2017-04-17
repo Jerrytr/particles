@@ -22,8 +22,7 @@ def getData(begin, end):
 	return float(text[begin:end])
 
 def getDate():
-	return time.strftime("%Y") + "-" + time.strftime("%m") + "-" 
-	+ time.strftime("%d")
+	return time.strftime("%Y") + "-" + time.strftime("%m") + "-" + time.strftime("%d")
 def getTime():
 	return time.strftime("%H") + ":" + time.strftime("%M") + ":00"
 def saveToDatabase(pm25, pm10, temp, hum, currentDate, currentTime):
